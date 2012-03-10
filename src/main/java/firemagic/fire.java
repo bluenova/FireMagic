@@ -24,6 +24,7 @@ public class fire extends MagePluginEvent {
         Block fireBlock = new Location(location.getWorld(), location.getBlockX(), location.getBlockY() + 1, location.getBlockZ()).getBlock();
         if (fireBlock.getType() == Material.AIR) {
             fireBlock.setType(Material.FIRE);
+            event.getPlayer().sendMessage("Mana decreesed!");
             return true;
         } else {
             return false;
