@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package firemagic;
+package firemagic.magics;
 
 import bluenova.fairytailcraft.plugin.MagePluginEvent;
 import java.util.HashMap;
@@ -25,6 +25,7 @@ public class fireball extends MagePluginEvent {
 
     @Override
     public boolean callPlayerInteractEvent(PlayerInteractEvent event) {
+        
         event.getPlayer().launchProjectile(SmallFireball.class);
         event.getPlayer().sendMessage("Mana decreesed!");
         lastActiveItem.put(event.getPlayer(), event.getItem());
