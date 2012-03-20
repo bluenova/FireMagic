@@ -20,7 +20,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 public class fire extends MagePluginEvent {
 
     @Override
-    public boolean callPlayerInteractEvent(PlayerInteractEvent event) {      
+    public boolean callPlayerInteractEvent(PlayerInteractEvent event, Integer level) {      
         ItemStack item = event.getItem();      
         if(item == null && event.getAction() == Action.LEFT_CLICK_BLOCK) {    
             Player player = event.getPlayer();
