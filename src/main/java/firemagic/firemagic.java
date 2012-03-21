@@ -24,8 +24,8 @@ public class firemagic implements MagePlugin {
     }
 
     public void loadPlugin() {
-        this.manager.registerMagic("fire", magicName, 1, 10, new fire(), MageEventType.INTERACT, false);
-        this.manager.registerMagic("fireball", magicName, 1, 50, new fireball(), MageEventType.INTERACT, false);
+        this.manager.registerMagic("fire", magicName, 1, 10, new fire(), MageEventType.INTERACT, false,new Long(2000));
+        this.manager.registerMagic("fireball", magicName, 1, 50, new fireball(), MageEventType.INTERACT, false,new Long(3000));
         System.out.println("FireMagic Successfully Load!");
     }
 
