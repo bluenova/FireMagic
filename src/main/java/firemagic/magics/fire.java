@@ -17,12 +17,12 @@ import org.bukkit.event.player.PlayerInteractEvent;
  *
  * @author Denny
  */
-public class fire extends MagePluginEvent {
+public class Fire extends MagePluginEvent {
 
     @Override
     public boolean callPlayerInteractEvent(PlayerInteractEvent event, Integer level) {      
         ItemStack item = event.getItem();      
-        if(item == null && event.getAction() == Action.LEFT_CLICK_BLOCK) {    
+        if(item == null && event.getAction() == Action.RIGHT_CLICK_BLOCK) {    
             Player player = event.getPlayer();
             Location location = player.getTargetBlock(null, 30).getLocation();
             Block fireBlock = new Location(location.getWorld(), location.getBlockX(), location.getBlockY() + 1, location.getBlockZ()).getBlock();     

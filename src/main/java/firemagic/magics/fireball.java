@@ -7,7 +7,6 @@ package firemagic.magics;
 import bluenova.fairytailcraft.plugin.MagePluginEvent;
 import java.util.HashMap;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.Fireball;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
@@ -20,7 +19,7 @@ import org.bukkit.util.Vector;
  *
  * @author Denny
  */
-public class fireball extends MagePluginEvent {
+public class Fireball extends MagePluginEvent {
 
     HashMap<Player, ItemStack> lastActiveItem = new HashMap<Player, ItemStack>();
 
