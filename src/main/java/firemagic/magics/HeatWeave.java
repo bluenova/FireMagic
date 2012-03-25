@@ -99,7 +99,7 @@ public class HeatWeave extends MagePluginEvent {
                     Logger.getLogger(HeatWeave.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 for (LivingEntity ent : toKill) {
-                    ent.setFireTicks(100);
+                    ent.setFireTicks(10000);
                 }
             }
         }

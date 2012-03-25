@@ -6,7 +6,7 @@ package firemagic.magics;
 
 import bluenova.fairytailcraft.plugin.MagePluginEvent;
 import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 
 /**
  *
@@ -15,8 +15,8 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 public class FireImmunity extends MagePluginEvent {
 
     @Override
-    public boolean callEntityDamageByEntityEvent(EntityDamageByEntityEvent event, Integer level) {
-        if(event.getDamager() instanceof Fire) {
+    public boolean callEntityDamageEvent(EntityDamageEvent event, Integer level) {
+        if(event.getCause() == EntityDamageEvent.DamageCause.FIRE_TICK && event.getDamage() > 0) {
             if(event.getEntity() instanceof Player) {
                 Player pl = (Player) event.getEntity();
                 int playerLevel = firemagic.FireMagic.manager.getPlayerConfig(pl).getLevel();

@@ -44,7 +44,7 @@ public class SmallFireballMagic extends MagePluginEvent {
                         Entity tar = proj.getNearbyEntities(1, 1, 1).get(0);
                         if (tar instanceof LivingEntity) {
                             LivingEntity target = (LivingEntity) tar;
-                            target.setFireTicks(6);
+                            target.setFireTicks(40);
                              shotFireball.put(shooter, false);
                         }
                     }

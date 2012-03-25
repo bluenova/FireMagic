@@ -33,7 +33,7 @@ public class FireMagic implements MagePlugin {
 
     public void loadPlugin() {
         FireMagic.manager.registerMagic("fire", magicName, 1, 10, new Fire(), MageEventType.INTERACT, false,new Long(2000));
-        FireMagic.manager.registerMagic("fireimmunity", magicName, 6, 15, new FireImmunity(), MageEventType.INTERACT, false,new Long(0));
+        FireMagic.manager.registerMagic("fireimmunity", magicName, 6, 15, new FireImmunity(), MageEventType.PASSIVEGETGAMAGE, false,new Long(0));
         FireMagic.manager.registerMagic("summonfire", magicName, 8, 13, new SummonFire(), MageEventType.INTERACT, false,new Long(3000));
         FireMagic.manager.registerMagic("smallfireball", magicName, 12, 20, new SmallFireballMagic(), MageEventType.INTERACT, false,new Long(3000));
         FireMagic.manager.registerMagic("fireball", magicName, 22, 30, new BigFireballMagic(), MageEventType.INTERACT, false,new Long(3000));

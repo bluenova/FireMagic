@@ -56,7 +56,7 @@ public class BigFireballMagic extends MagePluginEvent {
                                 }
                             }
                             if (!noFire) {
-                                target.setFireTicks(6);
+                                target.setFireTicks(40);
                                 target.damage(6, shooter);
                                 shotFireball.put(shooter, false);
                             }
